@@ -1,15 +1,16 @@
 NAME = fractol
 
-OS = $(shell uname)
-
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
 
 SRC = \
 		fractol.c\
-
-
+		init.c\
+		key_mouse.c\
+		mathutils.c\
+		render.c\
+		utils.c\
 
 OBJS = $(SRC:.c=.o)
 
